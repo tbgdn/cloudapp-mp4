@@ -38,13 +38,13 @@ public class SuperTable {
 		//	batman
 		rowValues.add(toRow("personal", "hero", "batman"));
 		rowValues.add(toRow("personal", "power", "money"));
-		rowValues.add(toRow("professional", "name", "wayne"));
+		rowValues.add(toRow("professional", "name", "bruce"));
 		rowValues.add(toRow("professional", "xp", "50"));
 		superTable.addRow("row2", rowValues);
 		rowValues.clear();
 		//	wolverine
 		rowValues.add(toRow("personal", "hero", "wolverine"));
-		rowValues.add(toRow("personal", "power", "stealing"));
+		rowValues.add(toRow("personal", "power", "healing"));
 		rowValues.add(toRow("professional", "name", "logan"));
 		rowValues.add(toRow("professional", "xp", "75"));
 		superTable.addRow("row3", rowValues);
