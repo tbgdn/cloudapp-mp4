@@ -59,7 +59,7 @@ public class SuperTable {
 			tableDescriptor.addFamily(new HColumnDescriptor(columnFamily));
 		}
 		new HBaseAdmin(configuration).createTable(tableDescriptor);
-		System.out.println(String.format("%s table has been created.", tableName));
+		//System.out.println(String.format("%s table has been created.", tableName));
 	}
 
 	private void addRow(String id, List<List<byte[]>> values) throws IOException {
@@ -70,7 +70,7 @@ public class SuperTable {
 		}
 		table.put(row);
 		table.close();
-		System.out.println(String.format("Added row with id '%s' into '%s' table.", id, tableName));
+		//System.out.println(String.format("Added row with id '%s' into '%s' table.", id, tableName));
 	}
 
 	private void scan(String... familyColumn) throws IOException {
@@ -81,7 +81,7 @@ public class SuperTable {
 		}
 		ResultScanner scanner = table.getScanner(scanInfo);
 		for(Result result = scanner.next(); result != null; result = scanner.next()){
-			System.out.println("Found row: " + result);
+			System.out.println(result);
 		}
 		scanner.close();
 	}
